@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://fvaqp80666f6"]
+
+[ext_resource type="Script" path="res://LevelSelect.gd" id="1_cwpju"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cwpju")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 275.0
+offset_bottom = 125.0
+columns = 5
+
+[node name="Level1" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Level2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Level3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Level4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Level5" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "5"
+
+[node name="Level6" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "6"
+
+[connection signal="pressed" from="GridContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="GridContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="GridContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="GridContainer/Level4" to="." method="_on_level_4_pressed"]
